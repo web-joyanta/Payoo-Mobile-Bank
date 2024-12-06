@@ -6,6 +6,10 @@ document.getElementById('btn-add-money').addEventListener('click', function(even
         const balance = getTextFieldValueById('balance-amount');
         const newBalance = balance + addMoney
         document.getElementById('balance-amount').innerText = newBalance;
+        // Transaction History
+        const p = document.createElement('p');
+        p.innerText = `Add Money: ${addMoney} TK. Balance: ${newBalance} TK.`
+        document.getElementById('transaction-container').appendChild(p);
     }else{
         alert('wrong input');
     }
